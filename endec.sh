@@ -25,6 +25,7 @@ promptdelete() { #prompt user to select whether to permanent delete initial encr
 		if [[ "$response3" =~ [yY] ]]
 		then
 			rm -r -f --interactive=never "$response" && rm -r -f --interactive=never "$response2".tar.gz && rm -r -f --interactive=never "${response%.gpg}"
+			rm -rf ~/.endecSTDERR.txt
 		elif [[ "$response3" =~ [nN] ]]
 		then
 			return 0
